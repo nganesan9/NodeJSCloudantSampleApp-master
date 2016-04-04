@@ -22,11 +22,11 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
 			$cf api https://api.ng.bluemix.net
 			$cf login
 ```			
-4. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
+5. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
 			$cf create-service cloudantNoSQLDB Shared <service-name>
-5. Bind this service to your app:
+6. Bind this service to your app:
 			$cf bs NodeJSCloudantSampleApp <service-name-as-in-step-4>
-6. Edit the manifest.yml file and change the <application-host> parameter to something unique.
+7. Edit the manifest.yml file and change the <application-host> parameter to something unique.
 ```
     applications:
     - path: .
@@ -39,11 +39,13 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
     - <service-name-as-in-step-4>
 ```
    The host you use will determinate your application url(e.g. <host>.mybluemix.net). REMOVE the following lines from manifest.yml as you no longer need this cloudant service. The one you created in step 4 will be the one primarily used.
-		declared-services:
-  	    cloudant-nodejs:
-    		label: cloudantNoSQLDB
-    		plan: Shared
-7. Start the application by typing
+```   
+	declared-services:
+  	   cloudant-nodejs:
+    	     label: cloudantNoSQLDB
+    	     plan: Shared
+```    	     
+8. Start the application by typing
 		$cf start NodeJSCloudantSampleApp
 
 And voila! Your very own instance of CloudantNoSQLDB with NodeJSCloudantSampleApp is now running on Bluemix.
