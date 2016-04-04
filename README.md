@@ -18,18 +18,21 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
 2. Download and install Cloud Foundry CLI to be used on the terminal.
 3. Fork this project into your Bluemix account by clickig on the "Fork Project" button in the top-right hand corner of this page : https://hub.jazz.net/git/neerajaganesan/NodeJSCloudantSampleApp
 4. On the Terminal, Connect to Bluemix using the CF CLI and follow the prompts to log in.
+```
+    $cf api https://api.ng.bluemix.net
+    $cf login
+```
+5. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
 
 ```
     $cf api https://api.ng.bluemix.net
     $cf login
 ```			
-
 5. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
 
 ```
     $cf create-service cloudantNoSQLDB Shared <service-name>
 ```
-	
 6. Bind this service to your app:
 			$cf bs NodeJSCloudantSampleApp <service-name-as-in-step-4>
 7. Edit the manifest.yml file and change the <application-host> parameter to something unique.
