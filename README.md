@@ -14,28 +14,18 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
 
 ## Running the app on Bluemix
 
-1. [Sign up][sign_up] for Bluemix.
-2. Download and install Cloud Foundry CLI to be used on the terminal.
-3. Fork this project into your Bluemix account by clickig on the "Fork Project" button in the top-right hand corner of this page : https://hub.jazz.net/git/neerajaganesan/NodeJSCloudantSampleApp
-4. On the Terminal, Connect to Bluemix using the CF CLI and follow the prompts to log in.
+* [Sign up][sign_up] for Bluemix. 
+* Download and install Cloud Foundry CLI to be used on the terminal.
+* Fork this project into your Bluemix account by clickig on the "Fork Project" button in the top-right hand corner of this page : https://hub.jazz.net/git/neerajaganesan/NodeJSCloudantSampleApp
+* On the Terminal, Connect to Bluemix using the CF CLI and follow the prompts to log in. 
+* Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
 ```
     $cf api https://api.ng.bluemix.net
     $cf login
 ```
-5. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
-
-```
-    $cf api https://api.ng.bluemix.net
-    $cf login
-```			
-5. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
-
-```
-    $cf create-service cloudantNoSQLDB Shared <service-name>
-```
-6. Bind this service to your app:
+* Bind this service to your app:
 			$cf bs NodeJSCloudantSampleApp <service-name-as-in-step-4>
-7. Edit the manifest.yml file and change the <application-host> parameter to something unique.
+* Edit the manifest.yml file and change the <application-host> parameter to something unique.
 ```
     applications:
     - path: .
@@ -54,7 +44,7 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
     	     label: cloudantNoSQLDB
     	     plan: Shared
 ```    	     
-8. Start the application by typing
+* Start the application by typing
 		$cf start NodeJSCloudantSampleApp
 
 And voila! Your very own instance of CloudantNoSQLDB with NodeJSCloudantSampleApp is now running on Bluemix.
