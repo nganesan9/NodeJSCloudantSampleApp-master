@@ -45,21 +45,29 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
     	     plan: Shared
 ```    	     
 * Start the application by typing
-		$cf start NodeJSCloudantSampleApp
+```
+    $cf start NodeJSCloudantSampleApp
+```    
 
 And voila! Your very own instance of CloudantNoSQLDB with NodeJSCloudantSampleApp is now running on Bluemix.
 
 ## Running the app locally:
 
-1. If you have not already, download node.js and install it on your local machine.
-2. Download the project to your local machine from this link : https://hub.jazz.net/git/neerajaganesan/NodeJSCloudantSampleApp
-3. On Bluemix Dashboard, create CloudantNoSQLDB service if it's not alredy present.
-4. Click on the service to open it in a new page. Click on "Service Credentials" in the left pane. Note value of "url".
-5. On terminal, 'cd' into folder.
-6. Copy "url" from step 4 into app.js of your project present in a local respository.
+* If you have not already, download node.js and install it on your local machine.
+* Download the project to your local machine from this link :
+```
+https://hub.jazz.net/git/neerajaganesan/NodeJSCloudantSampleApp
+```
+* On Bluemix Dashboard, create CloudantNoSQLDB service if it's not alredy present.
+* Click on the service to open it in a new page. Click on "Service Credentials" in the left pane. Note value of "url".
+* On terminal, 'cd' into folder.
+* Copy "url" from step 4 into app.js of your project present in a local respository.
    Paste url in line 13 of app.js.
-		cloudant_url = "<paste 'url' here>"
+```
+	cloudant_url = "<paste 'url' here>"
+```		
    Comment out lines 20-28
+```   
 		/*
 			if(process.env.VCAP_SERVICES)
 			{
@@ -74,12 +82,19 @@ And voila! Your very own instance of CloudantNoSQLDB with NodeJSCloudantSampleAp
 				}
 			}
  		*/
-8. cd into the project folder and if required by any modules, run
+``` 		
+* cd into the project folder and if required by any modules, run
+```
 		npm install
-6. Start the application by typing
+```		
+* Start the application by typing
+```
 		node app.js
-7. When the application executes, the first line will say:
+```		
+* When the application executes, the first line will say:
+```
 		http://localhost:<port_number>
+```		
 Paste this URL in the browser to open the application.
 
 ### For more documents on CloudantNoSQLDB
