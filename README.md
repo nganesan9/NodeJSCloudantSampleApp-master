@@ -23,6 +23,7 @@ This application uses CloudantNoSQL database service to demonstrate the operatio
     $cf login
 ```			
 5. Once you're in the same space as the app, create the CloudantNoSQLDB service in Bluemix
+
 	```
     $cf create-service cloudantNoSQLDB Shared <service-name>
     	```		
