@@ -2,7 +2,7 @@
 
 This application uses CloudantNoSQL database service to demonstrate the operations of Creat, Read, Update and Delete into database, using NodeJS runtime. Cloudant node module is used for these operations. They can alternatively be done with API calls which returns a JSON.
 
-### ** Click on the button below to deploy this Bluemix project to your account **
+### Click on the button below to deploy this Bluemix project to your account
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/neerajaganesan/NodeJSCloudantSampleApp)
 
